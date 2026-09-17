@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strandly Privacy Policy</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root {
+    --bg: #f6f7f5;
+    --surface: #ffffff;
+    --surface-2: #f0f2ed;
+    --border: #dfe3dc;
+    --text: #12160f;
+    --text-mid: #454b40;
+    --text-sub: #767d6f;
+    --green: #178a49;
+    --green-ink: #0d5c30;
+    --green-tint: #e3f3e8;
+    --code-bg: #eef1ea;
+    --shadow: 0 1px 2px rgba(18,22,15,0.04), 0 10px 28px -16px rgba(18,22,15,0.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #05070e;
+      --surface: #0e1310;
+      --surface-2: #131a10;
+      --border: #212a1f;
+      --text: #edf1ea;
+      --text-mid: #b3bcac;
+      --text-sub: #7e897a;
+      --green: #4ade80;
+      --green-ink: #86efac;
+      --green-tint: #12261a;
+      --code-bg: #0a0f0a;
+      --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 10px 28px -16px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #05070e;
+    --surface: #0e1310;
+    --surface-2: #131a10;
+    --border: #212a1f;
+    --text: #edf1ea;
+    --text-mid: #b3bcac;
+    --text-sub: #7e897a;
+    --green: #4ade80;
+    --green-ink: #86efac;
+    --green-tint: #12261a;
+    --code-bg: #0a0f0a;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 10px 28px -16px rgba(0,0,0,0.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--green-tint); color: var(--green-ink); }
+
+  .topbar { height: 3px; background: linear-gradient(90deg, var(--green), var(--green-ink)); }
+
+  .page { max-width: 720px; margin: 0 auto; padding: 44px 24px 96px; }
+
+  header.mast {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+  .brand { display: flex; align-items: center; gap: 9px; }
+  .brand-mark {
+    width: 26px; height: 26px; border-radius: 8px;
+    background: var(--green);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .brand-mark svg { width: 14px; height: 14px; }
+  .brand-name {
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+  .docmeta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px;
+    color: var(--text-sub);
+    text-align: right;
+    line-height: 1.55;
+  }
+  .docmeta b { color: var(--text-mid); font-weight: 600; }
+
+  h1 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 6vw, 36px);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin: 0 0 10px;
+  }
+  .lede {
+    color: var(--text-mid);
+    font-size: 16px;
+    max-width: 58ch;
+    margin: 0 0 24px;
+  }
+
+  .summary {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow);
+  }
+  .summary-lbl {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green-ink);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+  }
+  .summary-item { display: flex; align-items: flex-start; gap: 8px; font-size: 13.5px; color: var(--text-mid); }
+  .summary-item svg { flex-shrink: 0; margin-top: 2px; width: 14px; height: 14px; color: var(--green-ink); }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 40px;
+    box-shadow: var(--shadow);
+  }
+  nav.toc .toc-lbl {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-sub);
+    margin-bottom: 10px;
+    display: block;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding: 0 0 0 1.2em;
+    columns: 2;
+    column-gap: 24px;
+    font-size: 13.5px;
+  }
+  nav.toc li { margin-bottom: 7px; break-inside: avoid; }
+  nav.toc a { color: var(--text-mid); text-decoration: none; }
+  nav.toc a:hover, nav.toc a:focus-visible { color: var(--green-ink); text-decoration: underline; }
+
+  section { margin-bottom: 34px; scroll-margin-top: 20px; }
+  section h2 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  section h2 .num {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--green-ink);
+    background: var(--green-tint);
+    border-radius: 6px;
+    padding: 2px 7px;
+  }
+  section p { margin: 0 0 12px; color: var(--text-mid); }
+  section p:last-child { margin-bottom: 0; }
+  section ul { margin: 0 0 12px; padding-left: 1.3em; color: var(--text-mid); }
+  section li { margin-bottom: 6px; }
+  section li:last-child { margin-bottom: 0; }
+  strong { color: var(--text); font-weight: 600; }
+  h3.sub { font-family: "Manrope", sans-serif; font-weight: 700; font-size: 14px; color: var(--text); margin: 18px 0 8px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow);
+  }
+
+  table.datatable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 4px 0 12px;
+  }
+  table.datatable th, table.datatable td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  table.datatable th {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-sub);
+    background: var(--surface-2);
+  }
+  table.datatable td { color: var(--text-mid); }
+  table.datatable tr:last-child td { border-bottom: none; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; }
+  .tablewrap table { margin: 0; }
+  .tablewrap th:first-child, .tablewrap td:first-child { padding-left: 14px; }
+
+  code {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.9em;
+    background: var(--code-bg);
+    padding: 1.5px 6px;
+    border-radius: 5px;
+    color: var(--text);
+  }
+
+  a.inline { color: var(--green-ink); }
+
+  .no-list-flag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--green-ink);
+    background: var(--green-tint);
+    border-radius: 20px;
+    padding: 4px 11px;
+    margin: 4px 0 14px;
+  }
+
+  .assurance {
+    border-left: 3px solid var(--green);
+    background: var(--green-tint);
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    font-size: 13.5px;
+    color: var(--text-mid);
+    margin: 4px 0 12px;
+  }
+  .assurance strong { color: var(--green-ink); }
+
+  footer.contact {
+    margin-top: 44px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+  footer.contact .card { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  footer.contact h2 { margin: 0 0 4px; }
+  footer.contact p { margin: 0; }
+  .mailbtn {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: #fff;
+    background: var(--green);
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .pagefoot {
+    margin-top: 36px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: var(--text-sub);
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    nav.toc ol { columns: 1; }
+    .summary-grid { grid-template-columns: 1fr; }
+    footer.contact .card { flex-direction: column; align-items: flex-start; }
+    header.mast { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .docmeta { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"></div>
+<div class="page">
+
+  <header class="mast">
+    <span class="brand-name">STRANDLY</span>
+    <div class="docmeta"><b>Effective</b> September 16, 2026<br><b>Version</b> 1.1</div>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="lede">Strandly is a scalp and hair health app. This page explains, plainly, what the app collects, what it's used for, and — since Strandly doesn't run its own servers — where your data actually lives.</p>
+
+  <div class="summary">
+    <span class="summary-lbl">In short</span>
+    <div class="summary-grid">
+      <div class="summary-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>No account, no login, nothing tied to an email address</div>
+      <div class="summary-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Your data lives on your device — not on our servers, because we don't have any</div>
+      <div class="summary-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>No analytics, no ad tracking, no data brokers, ever</div>
+      <div class="summary-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Delete everything in one tap, any time, in Settings</div>
+    </div>
+  </div>
+
+  <nav class="toc">
+    <span class="toc-lbl">On this page</span>
+    <ol>
+      <li><a href="#collect">Information we collect</a></li>
+      <li><a href="#use">How we use it</a></li>
+      <li><a href="#storage">Where it's stored</a></li>
+      <li><a href="#third-parties">Third-party services</a></li>
+      <li><a href="#sharing">Data sharing</a></li>
+      <li><a href="#choices">Your choices &amp; consent</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ol>
+  </nav>
+
+  <section id="collect">
+    <h2><span class="num">01</span>Information we collect</h2>
+    <p>Strandly collects only what it needs to personalise your scalp and hair results. There's no account or sign-up — nothing here is tied to an email address or login.</p>
+    <div class="tablewrap">
+      <table class="datatable">
+        <tr><th>What</th><th>When</th><th>Why</th></tr>
+        <tr><td>Name, age range, gender, how you heard about the app</td><td>Onboarding</td><td>Personalising your plan and results</td></tr>
+        <tr><td>Questionnaire answers — sleep, diet, stress, scalp type, hair concerns, and similar</td><td>Onboarding quiz</td><td>Baseline scalp-health scoring</td></tr>
+        <tr><td>Two photos per scan (hairline and crown/part)</td><td>Every scan</td><td>AI-assisted photo analysis of your scalp</td></tr>
+        <tr><td>Scan results and history (scores, notes, recommendations)</td><td>Every scan</td><td>Tracking your progress over time</td></tr>
+        <tr><td>Subscription and purchase status</td><td>If you subscribe</td><td>Unlocking paid features</td></tr>
+      </table>
+    </div>
+    <p>Strandly does not use analytics, advertising, or tracking SDKs of any kind — there is nothing in the app collecting behavioural or usage data beyond what's listed above, and how we collect it is always the same: directly from what you type or photograph inside the app, never inferred or purchased from anywhere else.</p>
+  </section>
+
+  <section id="use">
+    <h2><span class="num">02</span>How we use it</h2>
+    <ul>
+      <li>To compute your scalp health score and generate personalised recommendations</li>
+      <li>To let the in-app Hair Coach chat answer questions using your quiz answers and latest scan</li>
+      <li>To build a hair-care routine and, if you choose to connect it, add reminders to your device calendar</li>
+      <li>To process subscription purchases and confirm what you're entitled to</li>
+    </ul>
+  </section>
+
+  <section id="storage">
+    <h2><span class="num">03</span>Where it's stored</h2>
+    <span class="no-list-flag">No account · no server database</span>
+    <p>Strandly has no backend server and no database. Your onboarding info, quiz answers, and scan history are stored <strong>locally on your device only</strong>, using standard iOS on-device storage. Nothing is synced to the cloud, and nothing is visible to us unless you send it to us directly (for example, by emailing support).</p>
+    <p>This also means: if you delete the app, or use the in-app <strong>"Delete my account"</strong> option in Settings, that data is gone — including from any backup you don't separately control — and we have no copy to restore it from.</p>
+  </section>
+
+  <section id="third-parties">
+    <h2><span class="num">04</span>Third-party services</h2>
+    <p>A few things Strandly does necessarily involve sending data to outside services:</p>
+    <div class="tablewrap">
+      <table class="datatable">
+        <tr><th>Service</th><th>What it receives</th><th>Purpose</th></tr>
+        <tr><td>OpenAI</td><td>Your two scan photos, plus relevant quiz answers, for each scan and Hair Coach question</td><td>AI-based photo analysis and chat responses</td></tr>
+        <tr><td>RevenueCat</td><td>Purchase and subscription status</td><td>Managing your subscription</td></tr>
+        <tr><td>Apple (App Store / StoreKit)</td><td>Payment and subscription transactions</td><td>Processing your purchase — Strandly never sees or stores payment details</td></tr>
+      </table>
+    </div>
+    <div class="assurance"><strong>Equal protection, by requirement.</strong> We only work with providers who are contractually and technically required to protect your data to a standard at least equal to this policy — none of them may use it for their own advertising, sell it onward, or repurpose it beyond the exact service listed above. Each also processes data under their own privacy policy and retention rules, and we only send what's strictly needed for the feature you're using at that moment.</div>
+  </section>
+
+  <section id="sharing">
+    <h2><span class="num">05</span>Data sharing</h2>
+    <p><strong>We do not sell your data.</strong> We don't share it with advertisers, data brokers, or anyone outside the third-party services listed above that are necessary to run the app. There is no other category of recipient — no affiliates, no "partners," no undisclosed parties.</p>
+  </section>
+
+  <section id="choices">
+    <h2><span class="num">06</span>Your choices &amp; consent</h2>
+    <p>Every permission below is asked for at the moment it's actually needed, never in advance, and every one can be withdrawn at any time — Strandly keeps working for everything that doesn't depend on it.</p>
+    <div class="tablewrap">
+      <table class="datatable">
+        <tr><th>Permission</th><th>Required?</th><th>How to withdraw it</th></tr>
+        <tr><td>Camera / Photos</td><td>Required to scan</td><td>iOS Settings → Strandly → Camera/Photos — scanning stops working, everything else doesn't</td></tr>
+        <tr><td>Calendar</td><td>Optional</td><td>iOS Settings → Strandly → Calendar, or disconnect it from within the app</td></tr>
+        <tr><td>Notifications</td><td>Optional</td><td>iOS Settings → Strandly → Notifications</td></tr>
+      </table>
+    </div>
+    <h3 class="sub">Deleting your data</h3>
+    <p>Settings → <strong>Delete my account</strong> inside the app, or simply uninstall it — both permanently and immediately erase everything Strandly has stored on your device. There's no waiting period, no support ticket required, and nothing held back on a server, because none exists.</p>
+  </section>
+
+  <section id="children">
+    <h2><span class="num">07</span>Children's privacy</h2>
+    <p>Strandly is not directed at children and is not intended for use by anyone under 13. We don't knowingly collect information from children under 13. Strandly is not listed in the Kids Category.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">08</span>Changes to this policy</h2>
+    <p>If this policy changes in a meaningful way, we'll update the effective date and version number at the top of this page. Since Strandly has no accounts or push notifications tied to an identity, we can't email you directly about changes — checking back here is the way to stay current. This page is linked both from the App Store listing and from inside the app itself (Settings → Learn more), so it's always reachable the same way.</p>
+  </section>
+
+  <footer class="contact" id="contact">
+    <div class="card">
+      <div>
+        <h2 style="display:block;"><span class="num">09</span>Contact us</h2>
+        <p>Questions about this policy or your data — reach out directly, or visit <a class="inline" href="./support.html">Support</a>.</p>
+      </div>
+      <a class="mailbtn" href="mailto:strandlycustomersupport@gmail.com">strandlycustomersupport@gmail.com</a>
+    </div>
+  </footer>
+
+  <div class="pagefoot">STRANDLY · PRIVACY POLICY · V1.1 · SEPTEMBER 16, 2026 · <a href="./support.html">SUPPORT</a></div>
+
+</div>
+
+</body>
+</html>
